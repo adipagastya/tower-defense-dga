@@ -30,7 +30,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Text _totalEnemyInfo;
 
     [SerializeField] private Transform _towerUIParent;
-    [SerializeField] private GameObject _towerUIPrefab;
+    [SerializeField] private GameObject _towerUIPrefab; 
 
     [SerializeField] private Tower[] _towerPrefabs;
     [SerializeField] private Enemy[] _enemyPrefabs;
@@ -102,6 +102,7 @@ public class LevelManager : MonoBehaviour
                 }
                 else
                 {
+                    ReduceLives (1);
                     enemy.gameObject.SetActive(false);
                 }
             }
